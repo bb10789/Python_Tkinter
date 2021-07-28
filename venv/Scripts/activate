@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Kelvin\PycharmProjects\Tkinter\venv"
+VIRTUAL_ENV="C:\Users\kelvi\Documents\CSE\Python_Tkinter\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

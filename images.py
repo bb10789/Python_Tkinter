@@ -1,11 +1,21 @@
 from tkinter import *
 from PIL import ImageTk, Image
+import glob, os
 
 root = Tk()
-im = Image.open("pictures/buddy.jpg")
+size = (922, 693)
+image_list = []
+image_image_list = []
 
-im = im.resize((round(im.size[0] * 0.2), round(im.size[1]*0.2)))
-my_img = ImageTk.PhotoImage(im, size= 2)
+# image import
+for infile in glob.glob("pictures/*.jpg"):
+    curr_image = Image.open(infile)
+    curr_image = curr_image.resize(size)
+    image_image_list.append(curr_image)
+    image_list.append(ImageTk.PhotoImage(curr_image))
+
+
+my_img = ImageTk.PhotoImage(image_image_list[0])
 my_label = Label(image=my_img)
 my_label.pack()
 
